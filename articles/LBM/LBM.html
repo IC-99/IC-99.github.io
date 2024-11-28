@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ivan Carlini - LBM</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
+		<link rel="stylesheet" href="assets/css/LBM.css" />
+        <link rel="icon" type="image/x-icon" href="images/favicon.jpg">
+        <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+                
+				<div class="top">
+                    
+					<!-- Logo -->
+						<div id="logo">
+							<span><img src="images/avatar.jpg" alt="" /></span>
+							<a href="../../index.html" id="top-link">
+							     <h1 id="title">Ivan Carlini</h1>
+							     <p>Software engineer</p>
+                            </a>
+						</div>
+                    
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" ><span class="icon solid fa-arrow-up">Top of page</span></a></li>
+                                <!--
+								<li><a href="#projects" id="projects-link"><span class="icon solid fa-th">Projects</span></a></li>
+                                <li><a href="#about" id="about-link"><span class="icon solid fa-user">About me</span></a></li>
+								<li><a href="#art" id="art-link"><span class="icon solid fa-music">Art</span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+                                -->
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://github.com/IC-99" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/ivan-carlini-a7b630211/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Article -->
+				<section id="top">
+				    <div>
+                        
+                        <div>
+                            <a href="../../index.html" ><span class="icon solid fa-home"></span></a>
+                        </div>
+
+                        <div id="date">
+                            08/04/2022
+                        </div>
+                            
+				        <header>
+				            <h1 class="scuro">
+                                Flood Simulation Using the Lattice Boltzmann Method
+                            </h1>
+				        </header>
+                        <p>
+                            The <b>Lattice Boltzmann Method</b> originates from the <b>Lattice Gas Automata</b> which is a cellular automata designed to simulate the behavior of a gas. A <b>cellular automata</b> is a model characterized by a finite set of <i>identical and synchronized</i> automata that follow the same evolutionary rules. In a cellular automata, <i>time is discrete and space is divided into cells</i>, each of which is updated at each simulation step according to defined rules. In the Lattice Gas Automata these rules have been defined in order to simulate the propagation and collisions between the gas particles <i>respecting the conservation laws</i>. However, the simulations generated with Lattice Gas Automata contain a lot of noise due to its <i>boolean nature</i>. This problem leads to the birth of the Lattice Boltzmann Method, in which for each cell is stored the density in <i>real numbers</i> of particles moving in a certain direction.
+                        </p>
+                        
+                        <div class="big_blog_image">
+                            <img src="images/GameOfLife.png"/>
+                            <div class="imagetitle">
+                                Frame of a cellular automata simulation.
+                            </div>
+                        </div>
+                        
+                        <div  class="big_blog_image">
+                            <img src="images/LatticeGasAutomata.png"/>
+                            <div class="imagetitle">
+                                Frame of a Lattice Gas Automata simulation.
+                            </div>
+                        </div>
+                        
+                        <p>
+                            The Lattice Boltzmann Method can be applied to different lattices. A standard classification is the <b>DnQm</b> in which the <b>n</b> indicates the <i>number of dimensions</i> of the lattice and the <b>m</b> indicates the <i>number of different discrete directions</i> that a particle can take in motion. In this project, two simulations were carried out, one two-dimensional on a <b>D2Q9</b> lattice and one three-dimensional on a <b>D3Q27</b> lattice.
+                        </p>
+                        
+                        <div class="small_blog_image">
+                            <img src="images/ReticoloD2Q9.PNG"/>
+                            <div class="imagetitle">
+                                D2Q9 lattice.
+                            </div>
+                        </div>
+                        
+                        <div class="small_blog_image">
+                            <img src="images/ReticoloD3Q27.jpg"/>
+                            <div class="imagetitle">
+                                D3Q27 lattice.
+                            </div>
+                        </div>
+                        
+                        <p>
+                            At the base of the Lattice Boltzmann Method is the <b>Boltzmann Distribution</b>, which represents the distribution of thermal velocities in an ideal gas.
+                        </p>
+                        
+                        <div>
+                            <div class="math_container">
+                                <div class="cmath">
+                                    `D(bb{v})=frac(m)(2 pi k T)exp(-frac(m|bb{v}|^2)(2 k T))`
+                                </div>
+                            </div>
+                            <div class="imagetitle">
+                                Boltzmann Distribution.
+                            </div>
+                        </div>
+                        
+                        
+                        <p>
+                            If the fluid flows with a non-zero macroscopic velocity <i>u</i>, then the <i>total velocity</i> of each particle will be equal to the sum of <i>u</i> with the thermal velocity <i>v</i>.
+                        </p>
+                        
+                        <div class="math_container">
+                            <div class="cmath">
+                                `bb{v}=bb{e}_i * c - bb{u}`
+                            </div>
+                        </div>
+                        
+                        
+                        <p>
+                            Constraining this total speed to be <i>one of the speeds allowed by the model</i>, then we obtain the following expression.
+                        </p>
+                        
+                        <div class="math_container">
+                            <div class="cmath">
+                                `D(bb{v})=frac(m)(2 pi k T)exp(-frac(m)(2 k T)*|bb{e}_i c - bb{u}|^2)`
+                            </div>
+                        </div>
+
+                        <p>
+                            This expression can be approximated through a Taylor series expansion obtaining the <i>expression for the determination of the probability of the i-th velocity vector</i>, which is the heart of the Lattice Boltzmann Method.
+                        </p>
+                        
+                        <div>
+                            <div class="math_container">
+                                <div class="cmath">
+                                    `D(bb{v})->w_i[1 + frac(3 bb{e}_i * bb{u})(c) + frac(9)(2)(frac(bb{e}_i * bb{u})(c))^2 - frac(3)(2)frac(|bb{u}|^2)(c^2)]`
+                                </div>
+                            </div>
+                            <div class="imagetitle">
+                                Expression for the determination of the probability of the i-th velocity vector.
+                            </div>
+                        </div>
+                        
+                        <div class="big_blog_image">
+                            <img src="images/DistribuzioneBoltzmannDiscreta.PNG"/>
+                            <div class="imagetitle">
+                                Discrete approximation of the Boltzmann Distribution.
+                            </div>
+                        </div>
+                        
+                        <p>
+                            The <b>Lattice Boltzmann's algorithm</b> has two main steps called <b>streaming</b> and <b>collision</b> steps. In the streaming step, the particles propagate by moving in the direction of their velocity.
+                        </p>
+                        
+                        <div class="big_blog_image">
+                            <img src="images/StreamingStep.png"/>
+                        </div>
+                        <div class="math_container">
+                            <div class="cmath">
+                                `f_i^("new")(x,t) = f_i^("old")(x + bb{e}_i * Delta t, t + Delta t)`
+                            </div>
+                        </div>
+
+                        <p>
+                            In the collision step the collisions of particles in a fluid are simulated, which make it move closer to a state of equilibrium. The density that would occur at equilibrium is then calculated and then the lattice is updated in order to bring it closer to this density by an omega factor, which depends on the viscosity of the fluid and indicates how quickly it reaches a state of equilibrium.
+                        </p>
+                        
+                        <div class="big_blog_image">
+                            <img src="images/CollisionStep.png"/>
+                        </div>
+                        <div class="math_container">
+                            <div class="cmath">
+                                `f_i^("eq") = rho w_i[1 + 3 bb{e}_i * bb{u} + frac(9)(2)(bb{e}_i * bb{u})^2 - frac(3)(2)|bb{u}|^2]`
+                            </div>
+                            <div class="cmath">
+                                `f_i^("new") = f_i^("old") + omega(f_i^("old") - f_i^("eq"))`
+                            </div>
+                        </div>
+                        
+                        <p></p>
+                        
+                        <h1 class="scuro">
+                            Results
+                        </h1>
+                        
+                        <p></p>
+                        
+                        <div class="big_blog_image">
+                            <img src="images/2dFloodSimulationNoBarrier.png"/>
+                            <div class="imagetitle">
+                                Wave simulation.
+                            </div>
+                        </div>
+                        
+                        <div class="big_blog_image">
+                            <img src="images/2dFloodSimulationSingleBarrier.png"/>
+                            <div class="imagetitle">
+                                Single obstacle simulation.
+                            </div>
+                        </div>
+                        
+                        <div class="big_blog_image">
+                            <img src="images/2dFloodSimulation.png"/>
+                            <div class="imagetitle">
+                                2D flood simulation.
+                            </div>
+                        </div>
+                        
+                        <div class="big_blog_image">
+                            <img src="images/3dFloodSimulation.png"/>
+                            <div class="imagetitle">
+                                3d flood simulation.
+                            </div>
+                        </div>
+                        
+                        
+				    </div>
+				</section>
+            </div>
+                    
+		    <!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Ivan Carlini. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+        
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

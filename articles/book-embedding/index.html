@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book embeddings</title>
+    <link href="https://cdn.jsdelivr.net/npm/vis-network@7.0.1/dist/vis-network.min.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="https://ivancarlini.bitbucket.io/articles/book-embedding/images/favicon.jpg">
+    <link rel="stylesheet" href="https://ivancarlini.bitbucket.io/articles/book-embedding/assets/css/styles.css">
+</head>
+<body>
+    <!-- Barra di navigazione -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>Book embeddings</h1>
+
+    <h2>Drag and drop to sort [1,7,8,9,6,4,5,2,3,10]</h2>
+    <ul id="sortable"></ul>
+
+    <div id="container">
+        <!-- Sezione dei bottoni a sinistra -->
+        <div id="buttons">
+            <button>Button 1</button>
+            <button>Button 2</button>
+            <button>Button 3</button>
+        </div>
+
+        <!-- Network a destra -->
+        <div id="network"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@7.0.1/dist/vis-network.min.js"></script>
+    <script src="https://ivancarlini.bitbucket.io/articles/book-embedding/assets/js/binary.wasm" type="application/wasm"></script>
+    <script src="https://ivancarlini.bitbucket.io/articles/book-embedding/assets/js/binary.js"></script>
+    <script src="https://ivancarlini.bitbucket.io/articles/book-embedding/assets/js/getGraph.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+</body>
+</html>

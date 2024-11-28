@@ -1,0 +1,10 @@
+[
+    {"title":"Test Song", "author":"Autore1", "type":"instrumental", "genre1":"rock", "genre2":"pop", "mood":"energetic", "bpm":"128", "email":"email1@gmail.com"},
+    {"title":"Test Song", "author":"Autore2", "type":"vocal", "genre1":"folk", "genre2":"jazz", "mood":"chill", "bpm":"105", "email":"email2@gmail.com"},
+    {"title":"Test Song", "author":"Autore3", "type":"instrumental", "genre1":"rock", "genre2":"jazz", "mood":"energetic", "bpm":"105", "email":"email3@gmail.com"},
+    {"title":"Test Song", "author":"Autore4", "type":"instrumental", "genre1":"folk", "genre2":"pop", "mood":"energetic", "bpm":"100", "email":"email4@gmail.com"},
+    {"title":"Test Song", "author":"Autore5", "type":"vocal", "genre1":"rock", "genre2":"pop", "mood":"chill", "bpm":"87", "email":"email5@gmail.com"},
+    {"title":"Test Song", "author":"Autore6", "type":"vocal", "genre1":"folk", "genre2":"jazz", "mood":"chill", "bpm":"150", "email":"email6@gmail.com"},
+    {"title":"Test Song", "author":"Autore7", "type":"instrumental", "genre1":"dance", "genre2":"electronic", "mood":"danceable", "bpm":"140", "email":"email7@gmail.com"},
+    {"title":"Test Song", "author":"Autore8", "type":"vocal", "genre1":"electronic", "genre2":"jazz", "mood":"chill", "bpm":"100", "email":"email8@gmail.com"}
+]

@@ -1,0 +1,3 @@
+emcc module.c -o module.wasm -s EXPORTED_FUNCTIONS="['_processFile', '_init']" -s STANDALONE_WASM=1
+
+emcc module.c -o module.js -s EXPORTED_FUNCTIONS="['_processFile', '_init']" -s MODULARIZE=1 -s ENVIRONMENT=web
