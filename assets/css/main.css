@@ -61,8 +61,7 @@ tt{
 .title{
     margin-inline: 10% auto;
     padding: 10px;
-	/*margin-top: -50%;*/
-    position: relative;
+    position: center;
     text-align: left
 }
 
